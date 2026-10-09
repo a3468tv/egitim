@@ -1,16 +1,7 @@
-{
-  "series": [
-    {
-      "name": "Tonguç 5. Sınıf",
-      "category": "Tonguç",
-      "cover": "https://i.ytimg.com/vi/J5h2a7Xy8ZQ/hqdefault.jpg",
-      "episodes": [
-        {
-          "id": "test123",
-          "title": "Test Video - Matematik",
-          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "id": "1",
+    "title": "Test Video - Matematik",
+    "url": "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4"
+  }
+]
