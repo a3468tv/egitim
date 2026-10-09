@@ -1,0 +1,13 @@
+{
+  "series": [
+    {
+      "name": "Tonguc 5.Sinif",
+      "category": "Tonguc Akademi",
+      "cover": "",
+      "episodes": [
+        { "id": "tonguc5_mat1", "title": "5.Sinif Matematik - Dogal Sayilar", "url": "https://www.youtube.com/watch?v=7pYv9p8pXxU" },
+        { "id": "tonguc5_fen1", "title": "5.Sinif Fen - Gunes ve Ay", "url": "https://www.youtube.com/watch?v=abcd1234" }
+      ]
+    }
+  ]
+}
