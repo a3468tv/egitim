@@ -1,27 +1,13 @@
-import fs from 'fs';
-import path from 'path';
-
 export default function handler(req, res) {
-  res.setHeader('Content-Type', 'audio/x-mpegurl; charset=utf-8');
+  res.setHeader('Content-Type', 'text/plain; charset=utf-8');
   res.setHeader('Access-Control-Allow-Origin', '*');
-  
-  try {
-    const filePath = path.join(process.cwd(), 'data', 'data.json');
-    const raw = fs.readFileSync(filePath, 'utf8');
-    const videos = JSON.parse(raw);
-
-    let m3u = '#EXTM3U\n';
-    const host = `https://${req.headers.host}`;
-
-    videos.forEach(v => {
-      const title = v.title || 'Video';
-      const id = v.id || '1';
-      m3u += `#EXTINF:-1,${title}\n`;
-      m3u += `${host}/api/stream?id=${id}\n`;
-    });
-
-    res.status(200).send(m3u);
-  } catch (e) {
-    res.status(200).send(`#EXTM3U\n#EXTINF:-1,Test Video - Matematik\nhttps://${req.headers.host}/api/stream?id=1\n`);
-  }
+  const m3u = `#EXTM3U
+#EXTINF:-1 group-title="Matematik" tvg-logo="https://i.ytimg.com/vi/5tTC-xwhV-4/maxresdefault.jpg",1.Sınıf Matematik Sayılar
+https://www.youtube.com/watch?v=cqOPI7hUgoo
+#EXTINF:-1 group-title="Matematik",1.Sınıf Matematik Toplama
+https://www.youtube.com/watch?v=fjTNmhIBpZ4
+#EXTINF:-1 group-title="Matematik",Test - Big Buck Bunny (MP4 Test)
+https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
+`;
+  res.status(200).send(m3u);
 }
