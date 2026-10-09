@@ -1,0 +1,16 @@
+{
+  "series": [
+    {
+      "name": "Tonguç 5. Sınıf",
+      "category": "Tonguç",
+      "cover": "https://i.ytimg.com/vi/J5h2a7Xy8ZQ/hqdefault.jpg",
+      "episodes": [
+        {
+          "id": "test123",
+          "title": "Test Video - Matematik",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        }
+      ]
+    }
+  ]
+}
